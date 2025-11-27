@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sri Sannidhi NGO</title>
+    <!-- Tailwind CDN for prototyping (not for production) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* small extra styles complementary to Tailwind */
+      .bg-hero { background-image: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,250,245,0.9)), url('https://via.placeholder.com/1600x700'); background-size: cover; background-position: center; }
+      .container-max { max-width: 1200px; }
+    </style>
+  </head>
+  <body class="antialiased text-gray-800 bg-gray-50">
+
+    <!-- Topbar -->
+    <div class="bg-white border-b">
+      <div class="container-max mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-amber-500 rounded flex items-center justify-center text-white font-bold">SS</div>
+          <div>
+            <div class="text-lg font-semibold">Sri Sannidhi NGO</div>
+            <div class="text-xs text-gray-500">Creating a brighter future for every child</div>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#about" class="text-sm hover:underline">About</a>
+          <a href="#programs" class="text-sm hover:underline">Programs</a>
+          <a href="#impact" class="text-sm hover:underline">Impact</a>
+          <a href="#getinvolved" class="text-sm hover:underline">Get Involved</a>
+          <a href="#donate" class="px-3 py-2 bg-amber-600 text-white rounded shadow">Donate</a>
+        </div>
+        <button id="menuBtn" class="md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+        <div class="px-4 py-3 space-y-2">
+          <a href="#about" class="block">About</a>
+          <a href="#programs" class="block">Programs</a>
+          <a href="#impact" class="block">Impact</a>
+          <a href="#getinvolved" class="block">Get Involved</a>
+          <a href="#donate" class="block px-3 py-2 bg-amber-600 text-white rounded inline-block">Donate</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <header class="bg-hero">
+      <div class="container-max mx-auto px-4 py-20">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Creating a Brighter Future for Every Child</h1>
+            <p class="mt-4 text-lg text-gray-700">Sri Sannidhi NGO works across education, health, nutrition and protection to empower children and their communities.</p>
+            <div class="mt-6 flex gap-3">
+              <a href="#donate" class="px-5 py-3 bg-amber-600 text-white rounded shadow">Donate Now</a>
+              <a href="#getinvolved" class="px-5 py-3 border border-amber-600 text-amber-600 rounded">Get Involved</a>
+            </div>
+            <div class="mt-6 text-sm text-gray-600">Registered NGO | FCRA-ready | Transparent financials</div>
+          </div>
+          <div class="hidden md:block">
+            <div class="rounded-lg overflow-hidden shadow-lg">
+              <img src="ADDPIC" alt="children learning" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Quick Stats -->
+    <section class="mt-6">
+      <div class="container-max mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white p-6 rounded-lg shadow text-center">
+            <div class="text-3xl font-bold">10,000+</div>
+            <div class="text-sm text-gray-500">Children Helped</div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow text-center">
+            <div class="text-3xl font-bold">1,200+</div>
+            <div class="text-sm text-gray-500">Communities Reached</div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow text-center">
+            <div class="text-3xl font-bold">500+</div>
+            <div class="text-sm text-gray-500">Volunteers</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container-max mx-auto px-4 py-12">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-2xl font-semibold">About Sri Sannidhi NGO</h2>
+          <p class="mt-4 text-gray-700">Sri Sannidhi Foundation is a non-profit charitable trust, registered according to the Provision of Maharastra Public trust Act, 1950, the income tax 1961, and Indian Trust act 1882.
+</p>
+          <ul class="mt-4 space-y-2 text-gray-600">
+            <li>• Community learning centres</li>
+            <li>• Mobile health camps</li>
+            <li>• Nutritional support and monitoring</li>
+            <li>• Child protection and legal aid referrals</li>
+          </ul>
+        </div>
+        <div>
+          <div class="grid grid-cols-2 gap-4">
+            <img src="https://via.placeholder.com/320x200" alt="program" class="rounded shadow">
+            <img src="https://via.placeholder.com/320x200" alt="program" class="rounded shadow">
+            <img src="https://via.placeholder.com/320x200" alt="program" class="rounded shadow">
+            <img src="https://via.placeholder.com/320x200" alt="program" class="rounded shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="bg-white border-t py-12">
+      <div class="container-max mx-auto px-4">
+        <h3 class="text-xl font-semibold">Our Programs</h3>
+        <div class="grid md:grid-cols-4 gap-6 mt-6">
+          <div class="p-4 rounded-lg shadow">
+            <h4 class="font-semibold">Education</h4>
+            <p class="text-sm text-gray-600 mt-2">After-school classes, scholarships, and remedial learning.</p>
+          </div>
+          <div class="p-4 rounded-lg shadow">
+            <h4 class="font-semibold">Health</h4>
+            <p class="text-sm text-gray-600 mt-2">Regular health checkups and mobile clinics.</p>
+          </div>
+          <div class="p-4 rounded-lg shadow">
+            <h4 class="font-semibold">Nutrition</h4>
+            <p class="text-sm text-gray-600 mt-2">Mid-day meals, supplements and growth monitoring.</p>
+          </div>
+          <div class="p-4 rounded-lg shadow">
+            <h4 class="font-semibold">Child Protection</h4>
+            <p class="text-sm text-gray-600 mt-2">Helpline support, awareness and legal referrals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact (Cards) -->
+    <section id="impact" class="container-max mx-auto px-4 py-12">
+      <h3 class="text-xl font-semibold">Impact Stories</h3>
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <div class="bg-white rounded shadow overflow-hidden">
+          <img src="https://via.placeholder.com/600x300" alt="story" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">Learning Centre Success</h4>
+            <p class="text-sm text-gray-600 mt-2">A community learning centre that improved school attendance by 40%.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded shadow overflow-hidden">
+          <img src="https://via.placeholder.com/600x300" alt="story" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">Health Camp Impact</h4>
+            <p class="text-sm text-gray-600 mt-2">Mobile clinics delivered essential care to remote villages.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded shadow overflow-hidden">
+          <img src="https://via.placeholder.com/600x300" alt="story" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">Nutrition Drive</h4>
+            <p class="text-sm text-gray-600 mt-2">Supplementary meals improved growth metrics in children.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get Involved / Volunteer / Contact -->
+    <section id="getinvolved" class="bg-gradient-to-r from-white to-orange-50 py-12 border-t">
+      <div class="container-max mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-xl font-semibold">Get Involved</h3>
+          <p class="mt-3 text-gray-700">Volunteer with us, partner as an organization, or join our fundraising events.</p>
+          <ul class="mt-4 text-gray-600 space-y-2">
+            <li>• Volunteer teaching</li>
+            <li>• Event support</li>
+            <li>• Fundraising &amp; awareness</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold">Contact & Volunteer</h4>
+          <form id="volForm" class="mt-4 space-y-3">
+            <input required class="w-full p-2 border rounded" placeholder="Your name" />
+            <input required type="email" class="w-full p-2 border rounded" placeholder="Email" />
+            <input class="w-full p-2 border rounded" placeholder="Phone (optional)" />
+            <textarea class="w-full p-2 border rounded" rows="3" placeholder="Why do you want to volunteer?"></textarea>
+            <div class="flex gap-3">
+              <button type="submit" class="px-4 py-2 bg-amber-600 text-white rounded">Submit</button>
+              <button type="button" id="clearVol" class="px-4 py-2 border rounded">Clear</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="py-12">
+      <div class="container-max mx-auto px-4">
+        <div class="bg-white p-6 rounded-lg shadow grid md:grid-cols-2 gap-6 items-center">
+          <div>
+            <h3 class="text-xl font-semibold">Support Our Mission</h3>
+            <p class="mt-3 text-gray-700">Your donation helps us scale programs and reach more children. We accept one-time and monthly donations.</p>
+            <ul class="mt-3 text-gray-600 space-y-1 text-sm">
+              <li>• ₹500 — Supports a child's learning materials for a month</li>
+              <li>• ₹1500 — Nutritional support for 3 children for a month</li>
+              <li>• ₹5000 — Community health camp costs</li>
+            </ul>
+          </div>
+          <div>
+            <div class="p-4 border rounded">
+              <label class="text-sm">Choose amount</label>
+              <div class="mt-3 grid grid-cols-3 gap-3">
+                <button class="don-amt px-3 py-2 border rounded">₹500</button>
+                <button class="don-amt px-3 py-2 border rounded">₹1500</button>
+                <button class="don-amt px-3 py-2 border rounded">₹5000</button>
+              </div>
+              <form id="donForm" class="mt-4 space-y-3">
+                <input required class="w-full p-2 border rounded" placeholder="Name" />
+                <input required type="email" class="w-full p-2 border rounded" placeholder="Email" />
+                <input required class="w-full p-2 border rounded" placeholder="Amount (₹)" />
+                <div class="flex gap-3">
+                  <button type="submit" class="px-4 py-2 bg-amber-600 text-white rounded">Donate</button>
+                  <button type="button" id="resetDon" class="px-4 py-2 border rounded">Reset</button>
+                </div>
+                <div class="text-xs text-gray-500">For production, integrate a payment gateway like Razorpay or Stripe (India/International).</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="container-max mx-auto px-4 grid md:grid-cols-3 gap-6">
+        <div>
+          <h4 class="font-semibold">Sri Sannidhi NGO</h4>
+          <p class="text-sm text-gray-300 mt-2">Registered NGO working for child welfare across communities.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Contact</h4>
+          <div class="text-sm text-gray-300 mt-2">email: info@srisannidhi.org</div>
+          <div class="text-sm text-gray-300">phone: +91 99999 99999</div>
+        </div>
+        <div>
+          <h4 class="font-semibold">Follow Us</h4>
+          <div class="flex gap-3 mt-2">
+            <a class="text-gray-300">Twitter</a>
+            <a class="text-gray-300">Facebook</a>
+            <a class="text-gray-300">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-sm text-gray-400 mt-6">© <span id="year"></span> Sri Sannidhi NGO — All rights reserved</div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+      // Volunteer form
+      const volForm = document.getElementById('volForm');
+      const clearVol = document.getElementById('clearVol');
+      volForm.addEventListener('submit', (e) => { e.preventDefault(); alert('Thanks — we will contact you.'); volForm.reset(); });
+      clearVol.addEventListener('click', () => volForm.reset());
+
+      // Donate form and quick amounts
+      const donForm = document.getElementById('donForm');
+      const donBtns = document.querySelectorAll('.don-amt');
+      donBtns.forEach(b => b.addEventListener('click', () => {
+        const amt = b.textContent.replace(/[^0-9]/g,'');
+        donForm.querySelector('input[placeholder="Amount (₹)"]').value = amt;
+      }));
+      donForm.addEventListener('submit', (e) => { e.preventDefault(); alert('Thanks for your willingness to donate. Integrate real payment gateway for live donations.'); donForm.reset(); });
+
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
