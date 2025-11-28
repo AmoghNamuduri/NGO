@@ -6,6 +6,11 @@
     <title>Sri Sannidhi Foundation</title>
     <!-- Tailwind CDN for prototyping (not for production) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <style>
       /* small extra styles complementary to Tailwind */
       .bg-hero { background-image: linear-gradient(
@@ -21,12 +26,12 @@
 
     <!-- Topbar -->
     <div class=" bg-green-900">
-      <div class=" mx-auto px-4 py-3 flex items-center justify-between">
+      <div class=" mx-auto px-4 py-5 flex items-center justify-between">
         <div class="flex items-center gap-3">
           <img src="C:\Users\Amogh Krishna\Pictures\Screenshots\Screenshot 2025-11-27 003342.png" alt="Logo" class="h-14 w-14 " />
           <div>
-            <div class="text-lg font-semibold">Sri Sannidhi Foundation</div>
-            <div class="text-xs text-gray-500">Small gestures - Big impact</div>
+            <div class="text-lg font-bold">Sri Sannidhi Foundation</div>
+            <div class="text-xs font-bold text-white">Small gestures - Big impact</div>
           </div>
         </div>
         <div class="hidden md:flex items-center gap-4">
@@ -36,7 +41,7 @@
           <a href="#partnernetwork" class="text-sm hover:underline">Partner Network</a>
           <a href="#volunteer" class="text-sm hover:underline">Volunteer</a>
           <a href="#howyoucanhelp" class="text-sm hover:underline">How you can help</a>
-          <a href="#donate" class="px-3 py-2 bg-amber-600 text-white rounded shadow">Donate</a>
+          <a href="#donate" class="px-3 py-2 bg-amber-600 font-boldtext-white rounded shadow">Donate</a>
           <a href="#contact" class="text-sm hover:underline">Contact Us</a>
 
         </div>
@@ -60,26 +65,42 @@
     </div>
 
     <!-- Hero -->
-    <header class="bg-hero">
-      <div class="container-max mx-auto px-4 py-20">
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h1 class="text-4xl md:text-4xl font-extrabold leading-tight">Small gestures - Big impact</h1>
-            <p class="mt-4 text-lg text-gray-700">Sri Sannidhi Foundation works across education, health, nutrition and protection to empower children and their communities.</p>
-            <div class="mt-6 flex gap-3">
-              <a href="#howyoucanhelp" class="px-5 py-3 border border-amber-600 text-amber-600 rounded">How you can help</a>
-              <a href="#donate" class="px-5 py-3 bg-amber-600 text-white rounded shadow">Donate Now</a>
-            </div>
-            <div class="mt-6 text-sm text-gray-600">Registered Foundation | Transparent financials</div>
-          </div>
-          <div class="hidden md:block">
-            <div class="rounded-lg overflow-hidden shadow-lg">
-              <img src="C:\Users\Amogh Krishna\Pictures\Screenshots\Screenshot 2025-11-27 001508.png" alt="children learning" class="w-full h-full object-cover">
-            </div>
-          </div>
-        </div>
+    <!-- Hero Slider -->
+<div class="swiper mySwiper h-[90vh] w-full">
+  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div
+      class="swiper-slide bg-cover bg-center flex items-center justify-center"
+      style="background-image: url('Screenshot 2025-11-27 001508.png');"
+    >
+      <div class="bg-black/50 p-8 rounded-xl text-white text-center">
+        <h1 class="text-4xl font-bold mb-4">Sri Sannidhi Foundation</h1>
+        <p class="text-lg">Small gestures - Big impact</p>
       </div>
-    </header>
+      
+    </div>
+
+    <!-- Slide 2 -->
+    <div
+      class="swiper-slide bg-cover bg-top flex items-center justify-center"
+      style="background-image: url('Screenshot 2025-11-27 204835.png');"
+    >
+      <div class="bg-black/50 p-8 rounded-xl text-white text-center">
+        <h1 class="text-4xl font-bold mb-4">Building a Better Tomorrow</h1>
+        <p class="text-lg">Your support helps us drive sustainable change.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- Navigation Buttons -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
 
     <!-- Quick Stats -->
     <section class="mt-6">
@@ -90,11 +111,11 @@
             <div class="text-sm text-gray-500">Children Helped</div>
           </div>
           <div class="bg-white p-6 rounded-lg shadow text-center">
-            <div class="text-3xl font-bold"></div>
+            <div class="text-3xl font-bold">1000+</div>
             <div class="text-sm text-gray-500">Communities Reached</div>
           </div>
           <div class="bg-white p-6 rounded-lg shadow text-center">
-            <div class="text-3xl font-bold">500+</div>
+            <div class="text-3xl font-bold">200+</div>
             <div class="text-sm text-gray-500">Volunteers</div>
           </div>
         </div>
@@ -317,6 +338,9 @@
       <div class="text-center text-sm text-gray-400 mt-6">© <span id="year"></span> Sri Sannidhi Foundation — All rights reserved</div>
     </footer>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
       // Mobile menu toggle
       const menuBtn = document.getElementById('menuBtn');
@@ -341,5 +365,30 @@
       // Year
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+    });
+  </script>
   </body>
 </html>
