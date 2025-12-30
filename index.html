@@ -1,36 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-white">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Sri Sannidhi Foundation</title>
     <!-- Tailwind CDN for prototyping (not for production) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          white: '#000000',
+          black: '#ffffff'
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <style>
-      /* small extra styles complementary to Tailwind */
-      .bg-hero { background-image: linear-gradient(
-                90deg,
-                rgba(214,255,160,0.85),
-                rgba(214,255,160,0.6)
-                ),
-                url('yourimage.jpg');}
-      .container-max { max-width: 1200px; }
-    </style>
+    
   </head>
-  <body class="antialiased text-gray-800">
+  <body class="antialiased bg-white text-gray-800">
 
     <!-- Topbar -->
-    <div class=" bg-green-900">
+    <div class="bg-blue-900">
       <div class=" mx-auto px-4 py-5 flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <img src="C:\Users\Amogh Krishna\Pictures\Screenshots\Screenshot 2025-11-27 003342.png" alt="Logo" class="h-14 w-14 " />
+          <img src="Logo.png" alt="Logo" class="h-14 w-14 " />
           <div>
-            <div class="text-lg font-bold">Sri Sannidhi Foundation</div>
+            <div class="text-lg font-bold text-white">Sri Sannidhi Foundation</div>
             <div class="text-xs font-bold text-white">Small gestures - Big impact</div>
           </div>
         </div>
@@ -41,7 +45,6 @@
           <a href="#partnernetwork" class="text-sm hover:underline">Partner Network</a>
           <a href="#volunteer" class="text-sm hover:underline">Volunteer</a>
           <a href="#howyoucanhelp" class="text-sm hover:underline">How you can help</a>
-          <a href="#donate" class="px-3 py-2 bg-amber-600 font-boldtext-white rounded shadow">Donate</a>
           <a href="#contact" class="text-sm hover:underline">Contact Us</a>
 
         </div>
@@ -66,12 +69,12 @@
 
     <!-- Hero -->
     <!-- Hero Slider -->
-<div class="swiper mySwiper h-[90vh] w-full">
+<div class="swiper mySwiper h-[90vh] w-full bg-white">
   <div class="swiper-wrapper">
     <!-- Slide 1 -->
     <div
-      class="swiper-slide bg-cover bg-center flex items-center justify-center"
-      style="background-image: url('Screenshot 2025-11-27 001508.png');"
+      class="swiper-slide bg-white bg-cover bg-center flex items-center justify-center"
+      style="background-image: url('Pic1.png');"
     >
       <div class="bg-black/50 p-8 rounded-xl text-white text-center">
         <h1 class="text-4xl font-bold mb-4">Sri Sannidhi Foundation</h1>
@@ -83,7 +86,7 @@
     <!-- Slide 2 -->
     <div
       class="swiper-slide bg-cover bg-top flex items-center justify-center"
-      style="background-image: url('Screenshot 2025-11-27 204835.png');"
+      style="background-image: url('Pic2.png');"
     >
       <div class="bg-black/50 p-8 rounded-xl text-white text-center">
         <h1 class="text-4xl font-bold mb-4">Building a Better Tomorrow</h1>
@@ -103,10 +106,10 @@
 
 
     <!-- Quick Stats -->
-    <section class="mt-6">
+    <section class="bg-blue-900  py-12  border-t">
       <div class="container-max mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bg-white p-6 rounded-lg shadow text-center">
+          <div class="bg-white  p-6 rounded-lg shadow text-center">
             <div class="text-3xl font-bold">500+</div>
             <div class="text-sm text-gray-500">Children Helped</div>
           </div>
@@ -122,36 +125,43 @@
       </div>
     </section>
 
-    <!-- About Us -->
-    <section id="about us" class="container-max mx-auto px-4 py-12">
+    <!-- About Us --> 
+    <section id="about us" class="bg-gradient-to-r from-white to-blue-900  py-12  border-t">
       <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="container-max px-12">
+          <h2 class="text-2xl  font-semibold">About Sri Sannidhi Foundation</h2>
+          <p class="mt-4 text-gray-600">Sri Sannidhi Foundation is a registered non-profit charitable trust established under the Maharashtra Public Trust Act, 1950, the Income Tax Act, 1961, and the Indian Trusts Act, 1882. For more than 15 years, our founding members have been actively involved in charitable activities and later came together to formally create this organization.</p>
+        </div>
         <div>
-          <h2 class="text-2xl font-semibold">About Sri Sannidhi Foundation</h2>
-          <p class="mt-4 text-gray-700">Sri Sannidhi Foundation is a registered non-profit charitable trust established under the Maharashtra Public Trust Act, 1950, the Income Tax Act, 1961, and the Indian Trusts Act, 1882. For more than 15 years, our founding members have been actively involved in charitable activities and later came together to formally create this organization.</p>
-          <p class="mt-3 text-gray-700">We support underprivileged children and their families through initiatives in education, healthcare, nutrition, child protection, livelihood support, women’s empowerment, and other social welfare Initiatives. Our primary focus is sponsoring the educational expenses of children in need.</p>
-          <ul class="mt-4 space-y-2 text-gray-600">
-            <li>• Sponsorship for school and college fees</li>
-            <li>• Direct fee payments to educational institutions</li>
-            <li>• Verification of academic and personal background</li>
-            <li>• Support for medical emergencies and social welfare cases</li>
+          <p class="text-2xl py-4  text-gray-700 font-semibold ">People Behind Sri Sannidhi Foundation</p>
+          <ul class=" font-semibold text-gray-600">
+            <li>1.	Sujana Namuduri - Chief Trustee, Mumbai; French Teacher & Voice-over Artist</li>
+            <li>2.	Subramanyam Venkata Namuduri - Trustee & Retail Lead, Mumbai</li>
+            <li>3.	Uday Kumar Bommisetty - Trustee & IT Professional, USA</li>
+            <li>4.	Eluru Krishna Mohan - Trustee & IT Professional, Bengaluru</li>
+            <li>5.	Makam Harika - Trustee & Teacher, Bengaluru</li>
           </ul>
         </div>
-  
-        <div>
-          <div class="grid grid-cols-2 gap-4">
-            <img src="https://via.placeholder.com/320x200" class="rounded shadow" />
-            <img src="https://via.placeholder.com/320x200" class="rounded shadow" />
-            <img src="https://via.placeholder.com/320x200" class="rounded shadow" />
-            <img src="https://via.placeholder.com/320x200" class="rounded shadow" />
-          </div>
+    </section>
+
+    <!-- Our Missions and Vision -->
+    <section id="mission&vision" class="bg-gradient-to-r from-blue-900 to-white  py-12  border-t">
+        <div class="container-max mx-auto px-4">
+          <h2 class="text-2xl font-semibold">Our mission & Vision</h2>
+          <p class="mt-4 text-gray-700">We support underprivileged children and their families through initiatives in education, healthcare, nutrition, child protection, livelihood support, women's empowerment, and other social welfare Initiatives. Our primary focus is sponsoring the educational expenses of children in need.</p>
+          <ul class="mt-4 font-semibold text-gray-600">
+            <li>1. Sponsorship for school and college fees</li>
+            <li>2. Direct fee payments to educational institutions</li>
+            <li>3. Verification of academic and personal background</li>
+            <li>4. Support for medical emergencies and social welfare cases</li>
+          </ul>
         </div>
       </div>
     </section>
 
 
-
     <!-- Initiatives -->
-    <section id="Initiatives" class="bg-white border-t py-12">
+    <section id="Initiatives" class="bg-gradient-to-r from-white to-blue-900  py-12  border-t">
       <div class="container-max mx-auto px-4">
         <h3 class="text-xl font-semibold">Our Initiatives</h3>
         <p class="mt-2 text-gray-600">Sri Sannidhi Foundation supports a wide range of social initiatives. Below are some of our major program categories:</p>
@@ -177,36 +187,55 @@
     </section>
 
     <!-- Impact (Cards) -->
-    <section id="impact" class="container-max mx-auto px-4 py-12">
+    <section id="impact" class="bg-gradient-to-r from-blue-900 to-white  py-12  border-t">
+      <div class="container-max mx-auto px-4">
       <h3 class="text-xl font-semibold">Impact Stories</h3>
       <p class="mt-2 text-gray-600">Here are some real stories of lives transformed through the support of Sri Sannidhi Foundation:</p>
       <div class="grid md:grid-cols-3 gap-6 mt-6">
         <div class="bg-white rounded shadow overflow-hidden">
           <img src="https://via.placeholder.com/600x300" class="w-full h-40 object-cover">
           <div class="p-4">
-            <h4 class="font-semibold">SMD Hindu School, Chennai</h4>
-            <p class="text-sm text-gray-600 mt-2">Sponsoring education for 10 girls from families of daily wage workers, supporting their 11th and 12th-grade studies.</p>
+            <h4 class="font-semibold">	From Loss to Leadership — Arthi's Journey to Becoming a Doctor</h4>
+            <p class="text-sm text-gray-600 mt-2">Arthi R., a bright and determined student from Bengaluru, reached out to Sri Sannidhi Foundation when her family was going through one of the toughest phases of their lives. She had lost her father to a sudden heart attack, and with no surviving relatives on her father’s side, her mother—who works as a tailor—was left to care for Arthi and her younger siblings studying in Grades 9 and 7.
+Despite these challenges, Arthi continued to excel in her studies. She shared her 11th and 12th grade marksheets along with her NEET certificate, reflecting her strong academic commitment and her dream of entering the medical field. Her sincerity, resilience, and passion stood out clearly.
+Moved by her dedication, Sri Sannidhi Foundation stepped forward to support her. Arthi secured admission into the BDS (Bachelor of Dental Surgery) program at DJ College of Dental Sciences & Research, Modinagar, Delhi. We committed to sponsoring her education for the full duration of the course, ensuring that financial constraints would never come in the way of her aspirations.
+Over the years, we supported Arthi consistently, paying her academic fees directly to the institution and staying connected with her progress. With each passing year, she grew not only academically but also personally, becoming more confident about her future.
+A Proud Achievement
+In November 2025, Arthi successfully completed her BDS degree—becoming a qualified dental doctor. Her achievement is a shining example of how determination, compassion, and timely support can transform a young student’s life.
+Today, Arthi is filled with hope and confidence. She dreams of supporting her mother and helping her younger siblings complete their education, ensuring they too build secure and independent futures.
+Her journey stands as a true reflection of the mission of Sri Sannidhi Foundation:
+to uplift deserving students and help them create brighter, stronger, and meaningful lives.
+
+</p>
           </div>
         </div>
         <div class="bg-white rounded shadow overflow-hidden">
           <img src="https://via.placeholder.com/600x300" class="w-full h-40 object-cover">
           <div class="p-4">
-            <h4 class="font-semibold">Aarti – Dental Sciences (Delhi)</h4>
-            <p class="text-sm text-gray-600 mt-2">Supporting Aarti, daughter of a tailor, with ₹10 lakhs for her BDS degree. She dreams of becoming a dentist and supporting her family.</p>
+            <h4 class="font-semibold">A New Beginning for Chandan — From Financial Struggles to Accenture</h4>
+            <p class="text-sm text-gray-600 mt-2">G. Lakshmi Chandan approached Sri Sannidhi Foundation with a simple but heartfelt request: support for his MSc Computer Science fees. With his mother working as a cook in a small company and being the sole earning member of the family, managing the education expenses for a two-year postgraduate program was beyond their means.
+Recognising his determination and the family’s situation, Sri Sannidhi Foundation stepped forward to assist him. We sponsored his MSc fees, ensuring that financial challenges did not interrupt his education or limit his future.
+Chandan worked hard, completed his final semester with dedication, and soon achieved a milestone that made all of us proud — he received a placement offer from Accenture.
+Seeing him secure a promising career and step confidently into the corporate world fills us with immense happiness. His journey is a beautiful reminder of what timely support and a student’s perseverance can achieve.
+Chandan’s success story is one more step toward our mission of helping capable students rise above financial barriers and build a brighter, dignified future.
+</p>
           </div>
         </div>
         <div class="bg-white rounded shadow overflow-hidden">
           <img src="https://via.placeholder.com/600x300" class="w-full h-40 object-cover">
           <div class="p-4">
-            <h4 class="font-semibold">Two Brothers — Chittoor, Andhra Pradesh</h4>
-            <p class="text-sm text-gray-600 mt-2">Sponsoring complete annual school fees for two brothers who lost their father, ensuring continuity in their education.</p>
+            <h4 class="font-semibold">More Success Stories on the Way</h4>
+            <p class="text-sm text-gray-600 mt-2">At Sri Sannidhi Foundation, these are just a few of the many lives we have touched. Several other students we are supporting are currently pursuing their education and are on the path to completing their courses soon. As they graduate and step into successful careers, we will continue to share their inspiring stories here.
+Every achievement reinforces our belief that a little support at the right time can change the entire direction of a young person’s life. We look forward to celebrating many more success stories in the years to come.
+</p>
+          </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Partner Network -->
-    <section id="partnernetwork" class="bg-white border-t py-12">
+    <section id="partnernetwork" class="bg-gradient-to-r from-white to-blue-900  py-12  border-t">
       <div class="container-max mx-auto px-4">
         <div>
           <h2 class="text-2xl font-semibold">Partner Network</h2>
@@ -221,7 +250,7 @@
     </section>
     
     <!-- Volunteer -->
-    <section id="volunteer" class="container-max mx-auto px-4 py-12">
+    <section id="volunteer" class="bg-gradient-to-r from-blue-900 to-white  py-12  border-t">
       <div class="grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h2 class="text-2xl font-semibold">Volunteer</h2>
@@ -236,72 +265,39 @@
     </section>
 
     <!-- How you can help / Volunteer / Contact -->
-    <section id="howyoucanhelp" class="bg-gradient-to-r from-white to-orange-50 py-12 border-t">
-      <div class="container-max mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-        <div>
+    <section id="howyoucanhelp" class="bg-gradient-to-r from-white to-blue-900  py-12  border-t">
+        <div class="container-max mx-auto px-4 ">
           <h3 class="text-xl font-semibold">How you can help</h3>
-          <p class="mt-3 text-gray-700">Volunteer with us, partner as an organization, or join our fundraising events.</p>
+          <p class="mt-3 text-gray-700">Support a Child’s Education.</p>
           <ul class="mt-4 text-gray-600 space-y-2">
-            <li>• Volunteer teaching</li>
-            <li>• Event support</li>
-            <li>• Fundraising &amp; awareness</li>
+            <li>Your contribution can transform a student’s future. We directly pay school or college fees to the respective educational institutions—ensuring complete transparency and that every rupee is used for the student’s growth. By supporting a child, you help them continue their studies with dignity and confidence.</li>
           </ul>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="font-semibold">Contact & Volunteer</h4>
-          <form id="volForm" class="mt-4 space-y-3">
-            <input required class="w-full p-2 border rounded" placeholder="Your name" />
-            <input required type="email" class="w-full p-2 border rounded" placeholder="Email" />
-            <input class="w-full p-2 border rounded" placeholder="Phone (optional)" />
-            <textarea class="w-full p-2 border rounded" rows="3" placeholder="Why do you want to volunteer?"></textarea>
-            <div class="flex gap-3">
-              <button type="submit" class="px-4 py-2 bg-amber-600 text-white rounded">Submit</button>
-              <button type="button" id="clearVol" class="px-4 py-2 border rounded">Clear</button>
-            </div>
-          </form>
+    </section>
+
+    
+    <!-- Our Modus Operandi-->
+    <section id="our-modus-operandi" class="bg-gradient-to-r from-blue-900 to-white  py-12  border-t">
+      <div class="container-max mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-xl font-semibold">Our Modus Operandi</h3>
+          <p class="mt-3 text-gray-700">When a student or family approaches us for assistance, we follow a careful and transparent process:</p>
+          <ul class="mt-4 text-gray-600 space-y-2">
+            <li>- We collect basic information, including academic records and mark sheets.</li>
+            <li>- We verify the details through personal interviews and background checks.</li>
+            <li>- Based on our assessment and available resources, we sponsor the student’s education within our capacity.</li>
+            <li>- After sponsorship, we continue to track the child’s academic progress, offer timely counselling, and stay connected to provide moral support along with financial help.</li>
+            <li>- This ensures that the support reaches genuine beneficiaries and truly impacts their lives.</li>
+
+          </ul>
+          <div 
         </div>
       </div>
     </section>
 
-    <!-- Donate Section -->
-    <section id="donate" class="py-12">
-      <div class="container-max mx-auto px-4">
-        <div class="bg-white p-6 rounded-lg shadow grid md:grid-cols-2 gap-6 items-center">
-          <div>
-            <h3 class="text-xl font-semibold">Support Our Mission</h3>
-            <p class="mt-3 text-gray-700">Your donation helps us scale Initiatives and reach more children. We accept one-time and monthly donations.</p>
-            <ul class="mt-3 text-gray-600 space-y-1 text-sm">
-              <li>• ₹500 — Supports a child's learning materials for a month</li>
-              <li>• ₹1500 — Nutritional support for 3 children for a month</li>
-              <li>• ₹5000 — Community health camp costs</li>
-            </ul>
-          </div>
-          <div>
-            <div class="p-4 border rounded">
-              <label class="text-sm">Choose amount</label>
-              <div class="mt-3 grid grid-cols-3 gap-3">
-                <button class="don-amt px-3 py-2 border rounded">₹500</button>
-                <button class="don-amt px-3 py-2 border rounded">₹1500</button>
-                <button class="don-amt px-3 py-2 border rounded">₹5000</button>
-              </div>
-              <form id="donForm" class="mt-4 space-y-3">
-                <input required class="w-full p-2 border rounded" placeholder="Name" />
-                <input required type="email" class="w-full p-2 border rounded" placeholder="Email" />
-                <input required class="w-full p-2 border rounded" placeholder="Amount (₹)" />
-                <div class="flex gap-3">
-                  <button type="submit" class="px-4 py-2 bg-amber-600 text-white rounded">Donate</button>
-                  <button type="button" id="resetDon" class="px-4 py-2 border rounded">Reset</button>
-                </div>
-                <div class="text-xs text-gray-500">For production, integrate a payment gateway like Razorpay or Stripe (India/International).</div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Contact Us -->
-    <section id="contact" class="bg-white border-t py-12">
+    <section id="contact" class="bg-gradient-to-r from-white to-blue-900  py-12  border-t">
       <div class="container-max mx-auto px-4">
         <div>
           <h2 class="text-2xl font-semibold">Contact Us </h2>
@@ -315,7 +311,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
+    <footer class="bg-gray-400 text-white py-6">
       <div class="container-max mx-auto px-4 grid md:grid-cols-3 gap-6">
         <div>
           <h4 class="font-semibold">Sri Sannidhi Foundation</h4>
@@ -335,7 +331,7 @@
           </div>
         </div>
       </div>
-      <div class="text-center text-sm text-gray-400 mt-6">© <span id="year"></span> Sri Sannidhi Foundation — All rights reserved</div>
+      <div class="text-center text-sm text-gray-900 mt-6">© <span id="year"></span> Sri Sannidhi Foundation — All rights reserved</div>
     </footer>
 
     <!-- Swiper JS -->
